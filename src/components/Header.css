@@ -1,0 +1,133 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.logo img {
+  width: 120px;
+  height: 25px;
+}
+
+.search-logo {
+  display: flex;
+  justify-content: center;
+  background-color: #FAFAFA;
+  float: left;
+  height: 50%;
+  border: #e1e1e1 1px solid;
+  border-radius: 5%;
+  position: relative;
+  right: 25px;
+  width: 75%;
+}
+
+.search-logo img {
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.muruganImage {
+  float: right;
+  position: relative;
+  bottom: 121px;
+  right: 10px;
+}
+.muruganImage img {
+  width: 36px;
+  height: 36px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+input {
+  border: none;
+  background-color: #fafafa;
+  padding: 10px;
+}
+
+.upload-button {
+  display: flex;
+  position: relative;
+  left: 12px;
+  width: 93%;
+  border-radius: 4px;
+  border: none;
+  background-color: #0095ff;
+  height: 50px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.upload-button button {
+  border: none;
+  background-color: #0095ff;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 22%;
+}
+.upload-button img {
+  width: 24px;
+  padding: 8px;
+}
+
+@media (min-width: 768px) {
+  .Header {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin: 0 24px;
+  }
+  .Header .upload-button {
+    width: 25%;
+    height: 45px;
+  }
+  .Header .upload-button button {
+    margin-left: 11%;
+  }
+  .Header .muruganImage img {
+    position: relative;
+    left: 125%;
+    top: 116px;
+    width: 40px;
+    height: 40px;
+  }
+  .Header .logo {
+    position: relative;
+    right: 6%;
+    bottom: 8px;
+  }
+  .Header .search-logo {
+    margin-left: 24px;
+    width: 250px;
+    justify-content: flex-start;
+    height: 45px;
+  }
+  .Header .search-logo input {
+    width: 184px;
+  }
+}
+@media (min-width: 1280px) {
+  .Header .logo {
+    right: 16%;
+  }
+  .Header .muruganImage img {
+    left: 422%;
+  }
+  .Header .upload-button {
+    width: 16%;
+    position: relative;
+    left: 110px;
+  }
+  .Header .container {
+    position: relative;
+    left: 80px;
+  }
+}/*# sourceMappingURL=Header.css.map */

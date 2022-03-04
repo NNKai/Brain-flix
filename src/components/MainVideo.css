@@ -1,0 +1,319 @@
+@font-face {
+  font-family: primaryfontregular;
+  src: url("../3.0 - Assets/Font/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: primaryfontbold;
+  src: url("../3.0 - Assets/Font/AvenirNextLTPro-Regular.otf");
+}
+* {
+  font-family: primaryfontregular;
+}
+
+body {
+  margin: 0;
+}
+
+.comment-section-avatar {
+  display: flex;
+  border-top: 1PX solid #e1e1e1;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.comment-name-date {
+  border-top: 1px #e1e1e1 solid;
+  padding-top: 16px;
+}
+.comment-name-date .name-date {
+  display: flex;
+  justify-content: space-between;
+}
+.comment-name-date .comments-para {
+  margin-left: 48px;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+.leftPaneling {
+  display: flex;
+  float: left;
+}
+.leftPaneling img {
+  width: 36px;
+  height: 36px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  left: 16px;
+  top: 20px;
+}
+
+#comment-section-container {
+  margin-top: 212px;
+}
+#comment-section-container .comment-name-date {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0 16px;
+}
+#comment-section-container .sb-avatar.sb-avatar--icon {
+  float: left;
+  position: relative;
+  top: 14px;
+}
+
+form {
+  float: right;
+  width: 75%;
+  margin: 0 16px;
+}
+form label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #afafaf;
+}
+form textarea {
+  width: 100%;
+  height: 100px;
+  border-color: #e1e1e1;
+  background-color: #fafafa;
+  margin-bottom: 8px;
+}
+form .addAComment-container {
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  background-color: #0095ff;
+  height: 40px;
+  color: #ffffff;
+}
+form .addAComment-container .comments {
+  margin-right: 50px;
+}
+form .addAComment-container {
+  display: flex;
+  align-items: center;
+}
+
+.props-h1 {
+  border-bottom: 1px #e1e1e1 solid;
+  margin: 0 16px;
+}
+.props-h1 h1 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  font-family: primaryfontbold;
+}
+
+#panel-container {
+  margin: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  color: #afafaf;
+  border-bottom: 1px #e1e1e1 solid;
+  margin: 0 16px;
+}
+#panel-container span {
+  color: black;
+  font-weight: 700;
+}
+#panel-container .panel-container-right {
+  padding-right: 24px;
+}
+#panel-container .panel-container-right .viewsContainer {
+  display: flex;
+  align-items: baseline;
+}
+#panel-container .panel-container-right .viewsContainer img {
+  padding-right: 8px;
+}
+#panel-container .panel-container-right .likesContainer {
+  display: flex;
+  align-items: flex-start;
+}
+#panel-container .panel-container-right .likesContainer img {
+  padding-right: 8px;
+}
+#panel-container .panel-container-right .likesContainer p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+.props-image {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-top: 56.25%;
+}
+.props-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.props-para {
+  margin: 16px;
+}
+.props-para p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.name-date {
+  padding-left: 8px;
+}
+.name-date span p {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: black;
+  position: relative;
+}
+.name-date p {
+  font-size: 14px;
+  color: #afafaf;
+}
+
+.video-Icons {
+  position: absolute;
+  top: 317px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.video-Icons .play-Icon-Container {
+  margin: 0 0 0 24px;
+}
+.video-Icons .right-Icons-Container {
+  margin: 0 16px 0 0;
+}
+
+.commentsSection-Length {
+  margin: 16px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .MainVideo {
+    margin: 0 36px;
+  }
+  .MainVideo #comment-section-container {
+    margin-top: 110px;
+  }
+  .MainVideo #comment-section-container .comment-name-date p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .MainVideo #comment-section-container .comment-name-date .name-date span p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .MainVideo #form .leftPaneling img {
+    width: 40px;
+    height: 40px;
+  }
+  .MainVideo #form form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+  }
+  .MainVideo #form form .addAComment-container {
+    width: 30%;
+  }
+  .MainVideo #form form .addAComment-container .comments {
+    margin-right: 30px;
+  }
+  .MainVideo #form form .textAreaContainer textarea {
+    width: 132%;
+    height: 35px;
+    margin-bottom: 12px;
+  }
+  .MainVideo .detail-container .video-Icons {
+    width: 85%;
+    top: 432px;
+  }
+  .MainVideo .detail-container .props-para p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .MainVideo .detail-container .props-h1 {
+    border-bottom: none;
+  }
+  .MainVideo .detail-container .props-h1 h1 {
+    font-size: 33px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+  .MainVideo .detail-container #panel-container .panel-container-left {
+    display: flex;
+  }
+  .MainVideo .detail-container #panel-container .panel-container-left span {
+    margin-right: 20px;
+  }
+  .MainVideo .detail-container #panel-container .panel-container-right {
+    display: flex;
+    align-items: flex-end;
+  }
+  .MainVideo .detail-container #panel-container .panel-container-right .likesContainer {
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .MainVideo #form form {
+    width: 46%;
+    justify-content: flex-start;
+    float: left;
+  }
+  .MainVideo #form form .textAreaContainer {
+    margin-left: 24px;
+  }
+  .MainVideo #form form .addAComment-container {
+    position: relative;
+    left: 237px;
+    width: 28%;
+  }
+  .MainVideo #form form .addAComment-container .comments {
+    margin-right: 24px;
+  }
+  .MainVideo #comment-section-container {
+    width: 66%;
+  }
+  .MainVideo #comment-section-container .comment-name-date .name-date {
+    width: 90%;
+    padding-left: 24px;
+  }
+  .MainVideo #comment-section-container .comment-name-date .comments-para {
+    width: 90%;
+    padding-left: 17px;
+  }
+  .MainVideo .detail-container .props-image {
+    width: 105%;
+    margin: 0 -32px;
+  }
+  .MainVideo .detail-container .details-Container {
+    width: 66%;
+  }
+  .MainVideo .detail-container .details-Container #panel-container {
+    width: 97%;
+  }
+}/*# sourceMappingURL=MainVideo.css.map */
