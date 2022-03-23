@@ -70,10 +70,13 @@ input {
         button {
             border: none;
             background-color: #0095ff;
-            font-size: 16px;
-            font-weight: 700;
-            color: #ffffff;
             margin-left: 22%;
+            a{
+                font-size: 16px;
+                font-weight: 700;
+                color: #ffffff;
+                text-decoration: none
+            }
         }
         img {
             width: 24px;

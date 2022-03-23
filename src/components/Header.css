@@ -68,10 +68,13 @@ input {
 .upload-button button {
   border: none;
   background-color: #0095ff;
+  margin-left: 22%;
+}
+.upload-button button a {
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
-  margin-left: 22%;
+  text-decoration: none;
 }
 .upload-button img {
   width: 24px;
