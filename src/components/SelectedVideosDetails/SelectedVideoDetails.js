@@ -13,10 +13,14 @@ const SelectedVideoDetails = ({ video, currentComments }) => {
     let videoTimestamp = `${month.substr(-2)}-${day.substr(-2)}-${year}`
     
   return (
-    <div className="videoDetail-container">
-        <picture className='hero-image'>
+      <>
+      <div className='hero-image-background'>
+      <picture className='hero-image'>
         <img src={video.image}></img>
         </picture>
+        </div>
+    <div className="videoDetail-container">
+        
     <div className='middlePage-Container'>
       <h1 className='video-title'>{video.title}</h1>
       <div className='description-data'>
@@ -47,6 +51,7 @@ const SelectedVideoDetails = ({ video, currentComments }) => {
         </div>
     </div>
     </div>
+    </>
   );
 };
 

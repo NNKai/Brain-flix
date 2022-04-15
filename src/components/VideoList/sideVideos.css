@@ -54,7 +54,7 @@
 @media (min-width: 1280px) {
   .RecommendedVideos {
     display: flex;
-    width: 35%;
+    width: 33%;
     flex-direction: column;
     float: right;
     right: 0%;

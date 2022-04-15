@@ -250,7 +250,7 @@ form .addAComment-container {
     margin-right: 30px;
   }
   #form form .textAreaContainer textarea {
-    width: 132%;
+    width: 100%;
     height: 35px;
     margin-bottom: 12px;
   }
@@ -311,6 +311,16 @@ form .addAComment-container {
   }
 }
 @media (min-width: 1280px) {
+  .hero-image-background {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image-background .hero-image {
+    width: 59%;
+    padding-top: 35.25%;
+  }
+
   .related-videos img {
     width: 200px;
     max-width: 176px;
@@ -321,9 +331,9 @@ form .addAComment-container {
   }
 
   .videoDetail-container {
-    width: 56%;
+    width: 45%;
     display: inline-block;
-    margin-left: 36px;
+    margin-left: 15%;
   }
   .videoDetail-container .props-para p {
     font-size: 16px;
@@ -331,7 +341,7 @@ form .addAComment-container {
 
   .middlePage-Container {
     width: 100%;
-    margin: 24px 0;
+    margin: 36px 0;
   }
 
   .RecommendedVideos {
@@ -378,5 +388,18 @@ form .addAComment-container {
   }
   .MainVideo .detail-container .details-Container #panel-container {
     width: 97%;
+  }
+
+  .name-date span p {
+    margin-left: 0;
+  }
+  .name-date p {
+    margin-left: 125px;
+  }
+
+  .textAreaContainer textarea {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 12px;
   }
 }/*# sourceMappingURL=MainVideo.css.map */

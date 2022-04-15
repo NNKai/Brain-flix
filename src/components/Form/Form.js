@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {Component} from 'react'
 import MuruganImage from '../../3.0 - Assets/Images/Mohan-muruge.jpg'
 import CommentLogo from '../../3.0 - Assets/Icons/add_comment.svg'
 
-const Form = () => {
+
+
+class Form extends Component{
+    update(){
+        console.log('whats up')
+    }
+   render(){
   return (
     <section id="form">
                 <div className="leftPaneling"><img src={MuruganImage}></img></div>
@@ -11,7 +17,7 @@ const Form = () => {
                         <label>JOIN THE CONVERSATION</label>
                         <textarea id="name" type="text" name="name" placeholder="Add your comment here"></textarea>
                         </div>
-                        <button className="addAComment-container">
+                        <button onclick={this.update()}className="addAComment-container">
                     <section className="comments">
                         <img src={CommentLogo}></img>
                     </section>
@@ -19,6 +25,7 @@ const Form = () => {
                 </form>
             </section >   
   )
+}
 }
 
 export default Form

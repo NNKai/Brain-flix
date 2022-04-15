@@ -24,11 +24,11 @@ const Header = () => {
         </div>
 
         
-        <div className='upload-button'>
+        <Link to={`/UploadPage`}><div className='upload-button'>
         <img src={uploadbutton}alt={"upload"}></img>
-        <button><Link to={`/UploadPage`}>UPLOAD</Link></button> 
+        <button><h3>UPLOAD</h3></button> 
   
-        </div>
+        </div></Link>
        
 
         <div className='muruganImage'>

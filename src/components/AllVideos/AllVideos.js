@@ -12,15 +12,14 @@ class AllVideos extends Component {
 
     fetchVideoDetails = () => {
         let currVideoId = this.props.match.params.videoId;
-
         if (!currVideoId) {
             const videoIds = this.state.allVideos.map(singleVideo => singleVideo.id);
             const randomIndex = Math.floor(Math.random() * videoIds.length)
             currVideoId = videoIds[randomIndex];
         }
-        axios.get(`https://project-2-api.herokuapp.com/videos/${currVideoId}?api_key=5af112cd-f72d-470b-b562-c8e7058a1616`)
+        axios.get(`http://localhost:8080/videos/${currVideoId}`)
         .then(({data})=>{
-            console.log(data)
+            console.log('data',data)
             this.setState({
                 selectedVideo : data
             })
@@ -29,7 +28,7 @@ class AllVideos extends Component {
 
     componentDidMount(){
         axios
-        .get(`https://project-2-api.herokuapp.com/videos/?api_key=5af112cd-f72d-470b-b562-c8e7058a1616`)
+        .get(`http://localhost:8080/videos`)
         .then (({data})=> {
             console.log('Videos: ', data);
             this.setState({
@@ -38,12 +37,21 @@ class AllVideos extends Component {
         })
     }
 
+    postDelete = (id, e )=>{
+        // let currVideoId = this.props.match.params.videoId
+        // axios.delete
+        console.log("hi")
+    }
+
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.videoId !== this.props.match.params.videoId) {
           this.fetchVideoDetails();
         }
       }
-
+      deleteHandler = (id) =>{
+        alert(id);
+    }
+    
     render(){
         const filteredVideos = this.state.selectedVideo
       ? this.state.allVideos.filter(video => video.id !== this.state.selectedVideo.id)
@@ -52,7 +60,7 @@ class AllVideos extends Component {
             <>
             {this.state.selectedVideo &&
             <SelectedVideoDetails video ={this.state.selectedVideo} currentComments={this.state.selectedVideo.comments}/>}
-            <VideoList allVideos={filteredVideos}/>
+            <VideoList allVideos={filteredVideos}  delete={this.state.postDelete}/>
             </>
         )
     }
