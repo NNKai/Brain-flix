@@ -1,11 +1,11 @@
 @font-face {
     font-family: primaryfontregular;
-    src: url("../3.0 - Assets/Font/AvenirNextLTPro-Regular.otf");
+    src: url("../../3.0\ -\ Assets/Font/AvenirNextLTPro-Regular.otf");
 }
 
 @font-face {
     font-family: primaryfontbold;
-    src: url("../3.0 - Assets/Font/AvenirNextLTPro-Regular.otf");
+    src: url("../../3.0\ -\ Assets/Font/AvenirNextLTPro-Bold.otf");
 }
 
 
@@ -33,9 +33,11 @@ body {
     .name-date {
        display: flex; 
        justify-content: space-between;
+       flex-direction:row;
+       flex-wrap: wrap;
     }
     .comments-para {
-        margin-left: 48px;
+      
         margin-block-start: 0;
         
     }
@@ -59,7 +61,7 @@ body {
 
 
 
-#comment-section-container {
+.comment-section-container {
     margin-top: 212px;
     
     .comment-name-date {
@@ -76,6 +78,9 @@ body {
 }
 
 
+#form{
+    margin-top: 14px;
+}
 
 form {
     float: right;
@@ -90,7 +95,7 @@ form {
     }
 
     textarea {
-        width: 100%;
+        width: 97%;
         height: 100px;
         border-color: #e1e1e1;
         background-color: #fafafa;
@@ -116,28 +121,28 @@ form {
     }
 }
 
-.props-h1 {
+.middlePage-Container {
+    margin: 16px 0;
     
-    border-bottom: 1px #e1e1e1 solid;
-    margin: 0 16px;
-    h1{
+        h1{
+        border-bottom: 1px #e1e1e1 solid;
         font-size: 24px;
         line-height: 32px;
         font-weight: 700;
-        font-family: primaryfontbold;
-    }
+        font-family: primaryfontregular;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-block-end: 0;
+    margin-block-start: 0;
+}
 }
 
 
 
 
-#panel-container {
+.description-data {
     margin: 0 16px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
+
     color: #afafaf;
     border-bottom: 1px #e1e1e1 solid;
     margin: 0 16px;
@@ -145,18 +150,17 @@ form {
         color: black;
         font-weight: 700;
     }
-    .panel-container-right{
-        padding-right: 24px;
         .viewsContainer{
             display: flex;
-            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
             img {
                 padding-right: 8px;
             }
         }
         .likesContainer{
             display: flex;
-            align-items: flex-start;
+            justify-content: space-between;
             img{
                 padding-right: 8px;
             }
@@ -164,11 +168,11 @@ form {
                 margin-block-start: 0;
             }
         }
-    }
+    
 
 }
 
-.props-image {
+.hero-image {
     width: 100%;
     display: block;
     position: relative;
@@ -240,9 +244,53 @@ form {
 }
 
 @media (min-width:768px) {
-    .MainVideo{
-        margin: 0 36px;
-        #comment-section-container{
+
+    .props-para{
+        p{
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .middlePage-Container{
+        margin: 24px;
+        .video-title{
+            border-bottom: none;
+        }
+        h1{
+            font-size: 36px;
+            padding-bottom: 16px;
+        }
+    }
+    #form{
+        .leftPaneling{
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 85%;
+            .addAComment-container{
+                width: 30%;
+                .comments{
+                    margin-right: 30px;
+                }
+            }
+            .textAreaContainer{
+                textarea{
+                    width: 100%;
+                    height: 35px;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+        
+    }
+    
+        .comment-section-container{
             margin-top: 110px;
             .comment-name-date{
                 p{
@@ -257,46 +305,14 @@ form {
                     }
                 }
             }
-        }
-        #form{
-            .leftPaneling{
-                img{
-                    width: 40px;
-                    height: 40px;
-                }
-            }
-            form{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 85%;
-                .addAComment-container{
-                    width: 30%;
-                    .comments{
-                        margin-right: 30px;
-                    }
-                }
-                .textAreaContainer{
-                    textarea{
-                        width: 132%;
-                        height: 35px;
-                        margin-bottom: 12px;
-                    }
-                }
-            }
-            
-        }
+        
+        
         .detail-container{
             .video-Icons{
                 width: 85%;
                 top: 432px;
             }
-            .props-para{
-                p{
-                    font-size: 14px;
-                    line-height: 22px;
-                }
-            }
+            
             .props-h1{
                 border-bottom: none;
                 h1 {
@@ -324,9 +340,71 @@ form {
             }
         }
     }
+
+    .description-data{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        .viewsContainer{
+            justify-content:start;
+            p{
+                padding-right: 24px;
+            }
+
+        }
+        .likesContainer{
+            justify-content: end;
+            p{
+            padding-left: 24px;
+        }
+        }
+    }
 }
 
 @media (min-width:1280px){
+    .hero-image-background{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        .hero-image{
+            width: 59%;
+            padding-top: 35.25%;
+        }
+    }
+    .related-videos {
+        img{
+            
+                width: 200px;
+            max-width: 176px;
+            border-radius: 4px;
+            object-fit: cover;
+            height: 113px;
+            
+        }
+    }
+    
+    .videoDetail-container{
+        width: 45%;
+        display: inline-block;
+        margin-left: 15%;
+        .props-para{
+            p{
+                font-size:16px
+
+            }
+        }
+    }
+    .middlePage-Container{
+        width: 100%;
+        margin: 36px 0;
+    }
+    .RecommendedVideos{
+        width: 35%;
+    }
+        .related-videos{
+            align-items: baseline;
+        }
+    
     .MainVideo {
         #form{
             form{
@@ -335,6 +413,7 @@ form {
             float: left;
             .textAreaContainer{
                 margin-left: 24px;
+               
             }
             .addAComment-container{
                 position: relative;
@@ -344,6 +423,7 @@ form {
                     margin-right: 24px;
                 }
             }
+        
         }
         }
         #comment-section-container{
@@ -373,7 +453,27 @@ form {
         }
     }
 
+    .name-date{
+        span{
+            p{
+            margin-left: 0;
+        }
+        }
+        p {
+            margin-left: 125px;
+        }
+    }
+
+    .textAreaContainer{
+        textarea{
+            width: 100%;
+            height: 35px;
+            margin-bottom: 12px;
+        }
+    }
+    
 }
+
 
 
 

@@ -68,14 +68,24 @@ input {
 .upload-button button {
   border: none;
   background-color: #0095ff;
+  margin-left: 22%;
+}
+.upload-button button a {
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
-  margin-left: 22%;
+  text-decoration: none;
 }
 .upload-button img {
   width: 24px;
   padding: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+a .upload-button button h3 {
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -89,8 +99,17 @@ input {
     width: 25%;
     height: 45px;
   }
+  .Header .upload-button img {
+    width: 100%;
+    padding: 0;
+  }
   .Header .upload-button button {
-    margin-left: 11%;
+    margin-left: -5px;
+    border-radius: 5%;
+    padding-right: 50px;
+  }
+  .Header .upload-button button h3 {
+    margin-left: 20px;
   }
   .Header .muruganImage img {
     position: relative;
@@ -115,19 +134,32 @@ input {
   }
 }
 @media (min-width: 1280px) {
+  .Header a {
+    width: 18%;
+  }
   .Header .logo {
     right: 16%;
   }
+  .Header .muruganImage {
+    right: 0;
+  }
   .Header .muruganImage img {
-    left: 422%;
+    left: 324%;
+    width: 75%;
+    height: 50px;
+    top: 125px;
   }
   .Header .upload-button {
-    width: 16%;
+    width: 56%;
     position: relative;
-    left: 110px;
+    left: 105%;
+  }
+  .Header .upload-button button {
+    border-radius: 5%;
+    margin-left: 17%;
   }
   .Header .container {
     position: relative;
-    left: 80px;
+    left: 19%;
   }
 }/*# sourceMappingURL=Header.css.map */

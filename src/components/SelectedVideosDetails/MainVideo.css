@@ -1,10 +1,10 @@
 @font-face {
   font-family: primaryfontregular;
-  src: url("../3.0 - Assets/Font/AvenirNextLTPro-Regular.otf");
+  src: url("../../3.0 - Assets/Font/AvenirNextLTPro-Regular.otf");
 }
 @font-face {
   font-family: primaryfontbold;
-  src: url("../3.0 - Assets/Font/AvenirNextLTPro-Regular.otf");
+  src: url("../../3.0 - Assets/Font/AvenirNextLTPro-Bold.otf");
 }
 * {
   font-family: primaryfontregular;
@@ -28,9 +28,10 @@ body {
 .comment-name-date .name-date {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .comment-name-date .comments-para {
-  margin-left: 48px;
   -webkit-margin-before: 0;
           margin-block-start: 0;
 }
@@ -50,19 +51,23 @@ body {
   top: 20px;
 }
 
-#comment-section-container {
+.comment-section-container {
   margin-top: 212px;
 }
-#comment-section-container .comment-name-date {
+.comment-section-container .comment-name-date {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
   margin: 0 16px;
 }
-#comment-section-container .sb-avatar.sb-avatar--icon {
+.comment-section-container .sb-avatar.sb-avatar--icon {
   float: left;
   position: relative;
   top: 14px;
+}
+
+#form {
+  margin-top: 14px;
 }
 
 form {
@@ -77,7 +82,7 @@ form label {
   color: #afafaf;
 }
 form textarea {
-  width: 100%;
+  width: 97%;
   height: 100px;
   border-color: #e1e1e1;
   background-color: #fafafa;
@@ -99,61 +104,60 @@ form .addAComment-container {
   align-items: center;
 }
 
-.props-h1 {
-  border-bottom: 1px #e1e1e1 solid;
-  margin: 0 16px;
+.middlePage-Container {
+  margin: 16px 0;
 }
-.props-h1 h1 {
+.middlePage-Container h1 {
+  border-bottom: 1px #e1e1e1 solid;
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
-  font-family: primaryfontbold;
-}
-
-#panel-container {
-  margin: 0 16px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-  color: #afafaf;
-  border-bottom: 1px #e1e1e1 solid;
-  margin: 0 16px;
-}
-#panel-container span {
-  color: black;
-  font-weight: 700;
-}
-#panel-container .panel-container-right {
-  padding-right: 24px;
-}
-#panel-container .panel-container-right .viewsContainer {
-  display: flex;
-  align-items: baseline;
-}
-#panel-container .panel-container-right .viewsContainer img {
-  padding-right: 8px;
-}
-#panel-container .panel-container-right .likesContainer {
-  display: flex;
-  align-items: flex-start;
-}
-#panel-container .panel-container-right .likesContainer img {
-  padding-right: 8px;
-}
-#panel-container .panel-container-right .likesContainer p {
+  font-family: primaryfontregular;
+  margin-left: 16px;
+  margin-right: 16px;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
   -webkit-margin-before: 0;
           margin-block-start: 0;
 }
 
-.props-image {
+.description-data {
+  margin: 0 16px;
+  color: #afafaf;
+  border-bottom: 1px #e1e1e1 solid;
+  margin: 0 16px;
+}
+.description-data span {
+  color: black;
+  font-weight: 700;
+}
+.description-data .viewsContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.description-data .viewsContainer img {
+  padding-right: 8px;
+}
+.description-data .likesContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.description-data .likesContainer img {
+  padding-right: 8px;
+}
+.description-data .likesContainer p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+.hero-image {
   width: 100%;
   display: block;
   position: relative;
   padding-top: 56.25%;
 }
-.props-image img {
+.hero-image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -213,72 +217,141 @@ form .addAComment-container {
 }
 
 @media (min-width: 768px) {
-  .MainVideo {
-    margin: 0 36px;
-  }
-  .MainVideo #comment-section-container {
-    margin-top: 110px;
-  }
-  .MainVideo #comment-section-container .comment-name-date p {
+  .props-para p {
     font-size: 14px;
     line-height: 22px;
   }
-  .MainVideo #comment-section-container .comment-name-date .name-date span p {
-    font-size: 14px;
-    line-height: 22px;
+
+  .middlePage-Container {
+    margin: 24px;
   }
-  .MainVideo #form .leftPaneling img {
+  .middlePage-Container .video-title {
+    border-bottom: none;
+  }
+  .middlePage-Container h1 {
+    font-size: 36px;
+    padding-bottom: 16px;
+  }
+
+  #form .leftPaneling img {
     width: 40px;
     height: 40px;
   }
-  .MainVideo #form form {
+  #form form {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 85%;
   }
-  .MainVideo #form form .addAComment-container {
+  #form form .addAComment-container {
     width: 30%;
   }
-  .MainVideo #form form .addAComment-container .comments {
+  #form form .addAComment-container .comments {
     margin-right: 30px;
   }
-  .MainVideo #form form .textAreaContainer textarea {
-    width: 132%;
+  #form form .textAreaContainer textarea {
+    width: 100%;
     height: 35px;
     margin-bottom: 12px;
   }
-  .MainVideo .detail-container .video-Icons {
-    width: 85%;
-    top: 432px;
+
+  .comment-section-container {
+    margin-top: 110px;
   }
-  .MainVideo .detail-container .props-para p {
+  .comment-section-container .comment-name-date p {
     font-size: 14px;
     line-height: 22px;
   }
-  .MainVideo .detail-container .props-h1 {
+  .comment-section-container .comment-name-date .name-date span p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .comment-section-container .detail-container .video-Icons {
+    width: 85%;
+    top: 432px;
+  }
+  .comment-section-container .detail-container .props-h1 {
     border-bottom: none;
   }
-  .MainVideo .detail-container .props-h1 h1 {
+  .comment-section-container .detail-container .props-h1 h1 {
     font-size: 33px;
     line-height: 44px;
     font-weight: 700;
   }
-  .MainVideo .detail-container #panel-container .panel-container-left {
+  .comment-section-container .detail-container #panel-container .panel-container-left {
     display: flex;
   }
-  .MainVideo .detail-container #panel-container .panel-container-left span {
+  .comment-section-container .detail-container #panel-container .panel-container-left span {
     margin-right: 20px;
   }
-  .MainVideo .detail-container #panel-container .panel-container-right {
+  .comment-section-container .detail-container #panel-container .panel-container-right {
     display: flex;
     align-items: flex-end;
   }
-  .MainVideo .detail-container #panel-container .panel-container-right .likesContainer {
+  .comment-section-container .detail-container #panel-container .panel-container-right .likesContainer {
     margin-left: 20px;
+  }
+
+  .description-data {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .description-data .viewsContainer {
+    justify-content: start;
+  }
+  .description-data .viewsContainer p {
+    padding-right: 24px;
+  }
+  .description-data .likesContainer {
+    justify-content: end;
+  }
+  .description-data .likesContainer p {
+    padding-left: 24px;
   }
 }
 @media (min-width: 1280px) {
+  .hero-image-background {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image-background .hero-image {
+    width: 59%;
+    padding-top: 35.25%;
+  }
+
+  .related-videos img {
+    width: 200px;
+    max-width: 176px;
+    border-radius: 4px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 113px;
+  }
+
+  .videoDetail-container {
+    width: 45%;
+    display: inline-block;
+    margin-left: 15%;
+  }
+  .videoDetail-container .props-para p {
+    font-size: 16px;
+  }
+
+  .middlePage-Container {
+    width: 100%;
+    margin: 36px 0;
+  }
+
+  .RecommendedVideos {
+    width: 35%;
+  }
+
+  .related-videos {
+    align-items: baseline;
+  }
+
   .MainVideo #form form {
     width: 46%;
     justify-content: flex-start;
@@ -315,5 +388,18 @@ form .addAComment-container {
   }
   .MainVideo .detail-container .details-Container #panel-container {
     width: 97%;
+  }
+
+  .name-date span p {
+    margin-left: 0;
+  }
+  .name-date p {
+    margin-left: 125px;
+  }
+
+  .textAreaContainer textarea {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 12px;
   }
 }/*# sourceMappingURL=MainVideo.css.map */
